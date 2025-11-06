@@ -1,0 +1,16 @@
+=== Nginx Backup Started: Thursday 06 November 2025 07:37:14 PM IST ===
+Config: /etc/nginx
+Doc root: /usr/share/nginx/html
+Archive: /backups/nginx_backup_2025-11-06.tar.gz
+
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+Archive created: /backups/nginx_backup_2025-11-06.tar.gz
+
+Verifying archive contents (first 50 lines):
+etc/nginx/
+etc/nginx/nginx.conf
+usr/share/nginx/html/
+usr/share/nginx/html/index.html
+
+=== Nginx Backup Completed: Thursday 06 November 2025 07:37:14 PM IST ===

@@ -1,0 +1,30 @@
+=== Apache Backup Started: Thursday 06 November 2025 07:30:07 PM IST ===
+Configuration Directory: /etc/apache2
+Document Root: /var/www/html
+Target Archive: /backups/apache_backup_2025-11-06.tar.gz
+
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+Backup archive created successfully.
+
+Verifying backup contents (first 20 entries):
+etc/apache2/
+etc/apache2/sites-enabled/
+etc/apache2/sites-enabled/000-default.conf
+etc/apache2/mods-available/
+etc/apache2/mods-available/session_dbd.load
+etc/apache2/mods-available/status.conf
+etc/apache2/mods-available/authn_dbm.load
+etc/apache2/mods-available/proxy_html.conf
+etc/apache2/mods-available/echo.load
+etc/apache2/mods-available/authn_socache.load
+etc/apache2/mods-available/slotmem_shm.load
+etc/apache2/mods-available/mime_magic.conf
+etc/apache2/mods-available/mpm_worker.conf
+etc/apache2/mods-available/wsgi.conf
+etc/apache2/mods-available/dav.load
+etc/apache2/mods-available/dump_io.load
+etc/apache2/mods-available/dir.conf
+etc/apache2/mods-available/info.conf
+etc/apache2/mods-available/log_debug.load
+etc/apache2/mods-available/proxy_ajp.load
