@@ -395,26 +395,3 @@ This setup ensures that:
 
 The environment is now **secure, reliable, and production-ready** for Sarah and Mike.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# linux_commands_assignments
-Understanding Linux commands, bash, setting up crons
