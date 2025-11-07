@@ -12,7 +12,6 @@ The environment setup includes:
 1. **System Monitoring** using `htop`, `df`, `du`, and automated metric logging.
 2. **User Management & Access Control** with password complexity and expiration policy.
 3. **Automated Backup Configuration** for Apache and Nginx web servers.
-
 ---
 
 ##  Table of Contents
