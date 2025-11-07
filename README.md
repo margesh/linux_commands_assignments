@@ -15,7 +15,7 @@ The environment setup includes:
 
 ---
 
-## 🧠 Table of Contents
+##  Table of Contents
 
 1. [System Monitoring Setup (Task 1)](#task-1-system-monitoring-setup)
 2. [User Management & Access Control (Task 2)](#task-2-user-management-and-access-control)
@@ -26,7 +26,7 @@ The environment setup includes:
 
 ---
 
-## 🧩 **Task 1: System Monitoring Setup**
+## **Task 1: System Monitoring Setup**
 
 ###  Objective
 
@@ -116,13 +116,13 @@ sudo chmod +x system_monitor.sh
 
 
 
-## 👥 **Task 2: User Management and Access Control**
+##  **Task 2: User Management and Access Control**
 
-### 🎯 Objective
+### Objective
 
 Create isolated user environments for **Sarah** and **Mike**, enforce password complexity and expiration.
 
-### ⚙️ Steps
+### Steps
 
 #### Create Users
 
@@ -137,7 +137,7 @@ sudo adduser Mike --force-badname
 sudo mkdir -p /home/Sarah/workspace
 sudo mkdir -p /home/Mike/workspace
 sudo chown -R Sarah:Sarah /home/sarah/workspace
-sudo chown -R Mike:Mike /home/mike/workspace
+sudo chown -R Mike:Mike /home/Mike/workspace
 sudo chmod 700 /home/Sarah/workspace
 sudo chmod 700 /home/Mike/workspace
 #### Password Expiration Policy (30 days)
@@ -165,13 +165,7 @@ maxrepeat = 2
 dictcheck = 1
 ```
 
-Ensure PAM configuration (Ubuntu):
 <img width="1850" height="1053" alt="12" src="https://github.com/user-attachments/assets/c2fe96b9-03d5-4d7a-ae8e-a5f0bb0f5242" />
-
-
-```bash
-sudo nano /etc/pam.d/common-password
-```
 <img width="1850" height="1053" alt="13" src="https://github.com/user-attachments/assets/ab70b302-627c-44e8-84e5-8aab8f91dd07" />
 
 Add or confirm:
@@ -190,9 +184,9 @@ sudo passwd Sarah  # test weak vs strong password
 
 ---
 
-## 💾 **Task 3: Backup Configuration for Web Servers**
+## **Task 3: Backup Configuration for Web Servers**
 
-### 🎯 Objective
+###  Objective
 
 Automate weekly compressed backups for Sarah’s Apache server and Mike’s Nginx server every **Tuesday at 12:00 AM**.
 
@@ -319,8 +313,8 @@ sudo crontab -e
 Add:
 
 ```
-0 0 * * 2 /backups//apache_backup.sh
-0 0 * * 2 /backups//nginx_backup.sh
+0 0 * * 2 /backups/apache_backup.sh
+0 0 * * 2 /backups/nginx_backup.sh
 ```
 
 #### Verify Backups
@@ -335,19 +329,18 @@ cat /backups/nginx_backup_log_$(date +%F).txt | head
 
 ## 🔍 **Verification & Logs**
 
-* `df -h`, `du -sh /var /home` → Disk usage tracking
+* `df -h` → Disk usage tracking
 * `ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head` → Identify heavy processes
-* `sudo chage -l sarah` → Verify password expiration
+* `sudo chage -l Sarah` → Verify password expiration
 * `sudo cat /backups/*_log_YYYY-MM-DD.txt` → Check backup integrity
 
 ---
 
 ## ⚠️ **Challenges & Notes**
 
-* `/var/log/` and `/backups/` require root permissions.
+* `/backups/` require root permissions.
 * Ensure usernames are lowercase to comply with `NAME_REGEX`.
 * Schedule cron as root to avoid `Permission denied`.
-* Consider encrypting backups if moved offsite.
 
 ---
 
@@ -372,19 +365,18 @@ cat /backups/nginx_backup_log_$(date +%F).txt | head
 
 ---
 
-## ✅ **Deliverables for Submission**
+## **Deliverables for Submission**
 
 * Screenshots of terminal showing successful execution:
 
   * `htop`, `df`, `du`, `ps` output
   * `chage -l` verification
   * `/backups/` directory and log files
-* GitHub Repository URL
-* PDF Report (optional) with stepwise documentation and screenshots
+* GitHub Repository URL -: https://github.com/margesh/linux_commands_assignments
 
 ---
 
-## 🏁 **Conclusion**
+##  **Conclusion**
 
 └── README.md
 This setup ensures that:
@@ -392,6 +384,4 @@ This setup ensures that:
 * System health is monitored continuously.
 * User access is secure and compliant with password policies.
 * Backups run automatically every week and are verified for integrity.
-
-The environment is now **secure, reliable, and production-ready** for Sarah and Mike.
 
